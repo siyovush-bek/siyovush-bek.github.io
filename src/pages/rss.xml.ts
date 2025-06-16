@@ -14,12 +14,12 @@ export const GET: APIRoute = async () => {
 		title: entry.data.title,
 		description: entry.data.description,
 		content: generateContent(entry.data.description, entry.data.slug),
-		link: `/${entry.data.slug}`,
+		link: `/${entry.data.slug}/`,
 		pubDate: entry.data.date,
 	} satisfies RSSFeedItem))
 
 	return rss({
-		trailingSlash: false,
+		trailingSlash: true,
 		title: SITE.titleDefault,
 		description: SITE.description,
 		site: SITE.url,

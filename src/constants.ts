@@ -56,11 +56,11 @@ export const HEADER: Header = {
 	internal: [
 		{
 			title: 'Blog',
-			url: '/blog',
+			url: '/blog/',
 		},
 		{
 			title: 'About',
-			url: '/about',
+			url: '/about/',
 		},
 	],
 	/**

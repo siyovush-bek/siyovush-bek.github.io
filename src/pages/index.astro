@@ -44,14 +44,14 @@ const posts = sortAsc(await getCollection('blog')).slice(0, POSTS_TO_SHOW)
 		<section>
 			<div class="border-b border-border pb-4 flex justify-between items-center">
 				<h2 class="font-medium text-xl md:text-2xl lg:text-3xl text-highlight">Latest Posts</h2>
-				<div><Link href="/blog">Read all posts</Link></div>
+				<div><Link href="/blog/">Read all posts</Link></div>
 			</div>
 			<Spacer axis="vertical" size={8} />
 			<div class="flex gap-10 flex-col">
 				{
 					posts.map(({ data: post }) => (
 						<div>
-							<Link variant="highlight" href={`/${post.slug}`}>
+							<Link variant="highlight" href={`/${post.slug}/`}>
 								{post.title}
 							</Link>
 							<Spacer axis="vertical" size={2} />

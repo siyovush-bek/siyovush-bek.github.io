@@ -24,7 +24,7 @@ export default defineConfig({
 		],
 	},
 	output: 'static',
-	trailingSlash: 'never',
+	trailingSlash: 'always',
 	site: SITE.url,
 	integrations: [
 		expressiveCode(),

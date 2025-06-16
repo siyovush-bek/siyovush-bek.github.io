@@ -15,7 +15,7 @@ const { tags } = Astro.props
 			<Link
 				class="font-normal no-underline hover:underline!"
 				data-pagefind-filter="tag"
-				href={`/tags/${FRONTMATTER_TAGS.get(tag)}`}
+				href={`/tags/${FRONTMATTER_TAGS.get(tag)}/`}
 			>
 				{tag}
 			</Link>
