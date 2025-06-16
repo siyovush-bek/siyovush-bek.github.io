@@ -1,48 +1,63 @@
-# Astro Starter Kit: Basics
+# Astro Theme: Minimal Blog
 
-```sh
-npm create astro@latest -- --template basics
+Welcome to **Astro Theme: Minimal Blog**, an ideal option to start sharing your ideas. It's easy to set up and features everything you'd need for a blog.
+
+[**Demo Website**](https://astro-minimal-blog.lekoarts.de)
+
+## ✨ Features
+
+- MDX support
+- No React, just Astro
+- Styled with [Tailwind](https://tailwindcss.com/)
+- RSS, Sitemap
+- Code blocks powered by [Expressive Code](https://expressive-code.com/)
+- Light/Dark mode
+- [Pagefind](https://pagefind.app/) search
+
+## 🚀 Getting started
+
+1. **Important:** Ensure that [pnpm](https://pnpm.io/installation) is installed
+1. Clone the [astro-theme-minimal-blog](https://github.com/LekoArts/astro-theme-minimal-blog) repository.
+1. Install dependencies.
+   ```shell
+   pnpm install
+   ```
+1. Run the development server.
+   ```shell
+   pnpm dev
+   ```
+
+## 📝 Using & modifying this theme
+
+### Add content
+
+This theme features a CLI to help you scaffold new blog posts. It asks you questions to fill out the frontmatter and creates a file in the end. Run the CLI:
+
+```shell
+pnpm assistant
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+If you want to extend it, change the [`assistant.ts`](./scripts/assistant.ts) file.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Change constants
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Parts of the theme are referencing [`constants.ts`](./src/constants.ts) to e.g. set the site title or main navigation. Modify its contents to suit your site before deploying it.
 
-## 🚀 Project Structure
+## 🔍 Reference
 
-Inside of your Astro project, you'll see the following folders and files:
+### Blog post frontmatter
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+By default, these frontmatter fields are available. You need to change [`content.config.ts`](./src/content.config.ts) to adjust it.
+
+```yaml
+title: Markdown Reference Overview
+slug: markdown-reference-overview
+description: A post showcasing the markdown formatting of a post
+date: 2025-02-18
+lastUpdated: 2025-02-18
+tags:
+  - General
+  - MDX
+searchIndex: true
+image: https://absolute-link.google.com/image.png
 ```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

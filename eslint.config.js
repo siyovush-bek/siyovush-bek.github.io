@@ -9,4 +9,7 @@ export default antfu({
 	formatters: true,
 	astro: true,
 	typescript: true,
+	rules: {
+		'node/prefer-global/process': 'off',
+	},
 })

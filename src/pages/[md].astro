@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content'
+import { SITE } from '@constants'
+import { frontmatterToString } from '@utils'
+
+export async function getStaticPaths() {
+	const entries = await getCollection('blog')
+
+	return entries.map((e) => ({
+		params: {
+			md: `${e.data.slug}.md`,
+		},
+		props: {
+			entry: e,
+		},
+	}))
+}
+
+const { entry } = Astro.props
+---
+
+<!doctype html>
+<html lang={SITE.lang}>
+	<head>
+		<meta name="color-scheme" content="light dark" />
+	</head>
+	<body>
+		<pre class="break-word whitespace-pre-wrap">{frontmatterToString(entry.data)}{entry.body}</pre>
+	</body>
+</html>
