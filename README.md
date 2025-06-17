@@ -2,7 +2,7 @@
 
 Welcome to **Astro Theme: Minimal Blog**, an ideal option to start sharing your ideas. It's easy to set up and features everything you'd need for a blog.
 
-[**Demo Website**](https://astro-minimal-blog.lekoarts.de)
+[**Demo Website**](https://astro-theme-minimal-blog.lekoarts.de)
 
 ## ✨ Features
 
