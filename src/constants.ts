@@ -34,13 +34,6 @@ export const SITE: Record<string, string> = {
 	defaultAuthor: 'LekoArts',
 }
 
-export const TOGGLES: Record<string, boolean> = {
-	/**
-	 * Whether to show the "View as markdown" link
-	 */
-	showLLMActions: true,
-}
-
 interface Header {
 	internal: Array<{ title: string, url: string }>
 	external: Array<{ title: string, url: string, props?: Record<string, unknown> }>

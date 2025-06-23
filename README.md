@@ -6,12 +6,14 @@ Welcome to **Astro Theme: Minimal Blog**, an ideal option to start sharing your 
 
 ## ✨ Features
 
-- MDX support
-- No React, just Astro
+- Write blog posts with MDX
 - Styled with [Tailwind](https://tailwindcss.com/)
-- RSS, Sitemap
 - Code blocks powered by [Expressive Code](https://expressive-code.com/)
-- Light/Dark mode
+- Custom asides component
+- Live coding powered by [Sandpack](https://github.com/codesandbox/sandpack)
+- RSS, Sitemap
+- Light/Dark/System color mode toggle
+- Add tags to your blog posts
 - [Pagefind](https://pagefind.app/) search
 
 ## 🚀 Getting started
@@ -61,3 +63,13 @@ tags:
 searchIndex: true
 image: https://absolute-link.google.com/image.png
 ```
+
+### Custom MDX components
+
+#### `<Aside>`
+
+TODO
+
+#### `<Playground>`
+
+TODO

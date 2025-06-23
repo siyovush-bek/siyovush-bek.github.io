@@ -8,10 +8,8 @@ import { defaultDateFormat, isoDateFormat } from '@utils'
 import SkipNavContent from '@components/a11y/skip-nav-content.astro'
 import Spacer from '@components/spacer.astro'
 import Aside from '@components/aside.astro'
-import Link from '@components/link.astro'
-import Icon from '@components/icon.astro'
-import { TOGGLES } from '@constants'
 import TagLinks from '@components/tag-links.astro'
+import Playground from '@components/playground.astro'
 
 export async function getStaticPaths() {
 	const entries = await getCollection('blog')
@@ -47,22 +45,8 @@ const { Content } = await render(entry)
 			<div class="text-faded">
 				{defaultDateFormat(post.date)} — <TagLinks tags={post.tags} />
 			</div>
-			{
-				TOGGLES.showLLMActions && (
-					<Link
-						target="_blank"
-						class="font-normal no-underline hover:underline! inline-flex gap-2 items-center"
-						href={`/${post.slug}.md/`}
-					>
-						<div class="bg-gray-100 dark:bg-gray-800 rounded-sm px-2">
-							<Icon name="mdx" class="w-7 h-7 shrink-0 fill-current" />
-						</div>{' '}
-						View as Markdown
-					</Link>
-				)
-			}
 			<Spacer axis="vertical" size={12} />
-			<Content components={{ Aside }} />
+			<Content components={{ Aside, Playground }} />
 		</Prose>
 	</SkipNavContent>
 </Layout>
