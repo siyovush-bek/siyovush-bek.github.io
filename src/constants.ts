@@ -9,7 +9,7 @@ export const SITE: Record<string, string> = {
 	 */
 	url: 'https://astro-theme-minimal-blog.lekoarts.de',
 	/**
-	 * Postfix in titles
+	 * Site-wide title
 	 */
 	title: 'Minimal Blog',
 	/**
