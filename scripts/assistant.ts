@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import * as p from '@clack/prompts'
-import slugify from '@sindresorhus/slugify'
+import isValidFilename from 'valid-filename'
 import { FRONTMATTER_TAGS } from '../src/constants'
 
 const TAGS_NAMES = Array.from(FRONTMATTER_TAGS.keys())
@@ -41,7 +41,7 @@ async function main() {
 		const blog = await p.group({
 			slug: () => p.text({
 				message: 'Slug',
-				initialValue: slugify(title),
+				placeholder: 'Use a SEO-friendly kebab-case slug',
 				validate: (value) => {
 					if (value.length === 0) {
 						return 'slug is required'
@@ -57,6 +57,9 @@ async function main() {
 					}
 					if (value.includes('.')) {
 						return 'slug must not contain dots'
+					}
+					if (!isValidFilename(value)) {
+						return 'slug must be a valid filename'
 					}
 				},
 			}),

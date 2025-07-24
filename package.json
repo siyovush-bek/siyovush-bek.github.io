@@ -37,7 +37,6 @@
 	"devDependencies": {
 		"@antfu/eslint-config": "^4.17.0",
 		"@clack/prompts": "^0.11.0",
-		"@sindresorhus/slugify": "^2.2.1",
 		"@tailwindcss/typography": "^0.5.16",
 		"@types/mdast": "^4.0.4",
 		"@types/react": "^19.1.8",
@@ -60,6 +59,7 @@
 		"sirv": "^3.0.1",
 		"tsx": "^4.20.3",
 		"typescript": "^5.8.3",
-		"unist-util-visit": "^5.0.0"
+		"unist-util-visit": "^5.0.0",
+		"valid-filename": "^4.0.0"
 	}
 }
