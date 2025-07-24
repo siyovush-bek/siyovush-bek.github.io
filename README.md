@@ -45,6 +45,23 @@ If you want to extend it, change the [`assistant.ts`](./scripts/assistant.ts) fi
 
 Parts of the theme are referencing [`constants.ts`](./src/constants.ts) to e.g. set the site title or main navigation. Modify its contents to suit your site before deploying it.
 
+### Change existing tags / Add new tags
+
+Inside [`constants.ts`](./src/constants.ts) the `FRONTMATTER_TAGS` map contains the available tags for your site. You need to add your display name and slug of the tag inside this map. The display name will be used in the UI and the slug will be used in the URL.
+
+It's referenced by Astro's content collections and also by the [`assistant.ts`](./scripts/assistant.ts) file.
+
+You can add a new tag like so:
+
+```ts
+export const FRONTMATTER_TAGS = new Map(
+	[
+		// Existing tags...
+		['Display name', 'slug-of-your-tag'] as const,
+	],
+)
+```
+
 ## 🔍 Reference
 
 ### Blog post frontmatter
