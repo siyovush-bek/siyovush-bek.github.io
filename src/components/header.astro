@@ -3,6 +3,7 @@ import { HEADER, SITE } from '@constants'
 import Spacer from './spacer.astro'
 import Link from './link.astro'
 import Search from './search.astro'
+import ThemeSelect from './theme-select.astro'
 
 const { pathname } = Astro.url
 ---
@@ -17,7 +18,11 @@ const { pathname } = Astro.url
 				aria-label={`${SITE.title} - Back to home`}>{SITE.title}</a
 			>
 		</div>
-		<Search />
+		<div class="flex flex-column justify-between items-center">
+			<ThemeSelect />
+			<span class="w-px h-auto bg-border m-1"></span>
+			<Search />
+		</div>
 	</div>
 	<Spacer axis="vertical" size={6} />
 	<div class="flex flex-row justify-between items-center border-b border-border pb-4 text-lg md:text-xl">
