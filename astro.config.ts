@@ -34,7 +34,6 @@ export default defineConfig({
 	output: 'static',
 	trailingSlash: 'always',
 	site: "https://siyovush-bek.github.io",
-	base: '/astro-blog/',
 	integrations: [expressiveCode(), mdx(), sitemap(), pagefindIntegration(), react()],
 	vite: {
 		plugins: [tailwindcss()],
