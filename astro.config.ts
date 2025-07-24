@@ -33,7 +33,7 @@ export default defineConfig({
 	},
 	output: 'static',
 	trailingSlash: 'always',
-	site: "siyovush-bek.github.io",
+	site: "https://siyovush-bek.github.io",
 	base: '/astro-blog/',
 	integrations: [expressiveCode(), mdx(), sitemap(), pagefindIntegration(), react()],
 	vite: {
