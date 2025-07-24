@@ -7,11 +7,11 @@ export const SITE: Record<string, string> = {
 	/**
 	 * Base URL of your site, used in sitemap generation
 	 */
-	url: 'https://astro-theme-minimal-blog.lekoarts.de',
+	url: 'https://siyovush-bek.github.io',
 	/**
 	 * Site-wide title
 	 */
-	title: 'Minimal Blog',
+	title: 'Siyovush-Bek Blog',
 	/**
 	 * Used on index page and as a fallback if no title is set
 	 */
@@ -61,19 +61,19 @@ export const HEADER: Header = {
 	 */
 	external: [
 		{
-			title: 'Bluesky',
-			url: 'https://bsky.app/profile/lekoarts.de',
+			title: 'GitHub',
+			url: 'https://github.com/siyovush-bek',
 			props: {
 				target: '_blank',
 			},
 		},
-		{
-			title: 'Homepage',
-			url: 'https://www.lekoarts.de/?utm_source=astro-theme-minimal-blog',
-			props: {
-				target: '_blank',
-			},
-		},
+		// {
+		// 	title: 'Homepage',
+		// 	url: 'https://www.lekoarts.de/?utm_source=astro-theme-minimal-blog',
+		// 	props: {
+		// 		target: '_blank',
+		// 	},
+		// },
 	],
 }
 
