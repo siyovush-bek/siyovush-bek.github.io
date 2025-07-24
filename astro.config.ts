@@ -33,7 +33,7 @@ export default defineConfig({
 	},
 	output: 'static',
 	trailingSlash: 'always',
-	site: "https://siyovush-bek.github.io",
+	site: SITE.url,
 	integrations: [expressiveCode(), mdx(), sitemap(), pagefindIntegration(), react()],
 	vite: {
 		plugins: [tailwindcss()],
