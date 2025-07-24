@@ -11,15 +11,15 @@ export const SITE: Record<string, string> = {
 	/**
 	 * Site-wide title
 	 */
-	title: 'Siyovush-Bek Blog',
+	title: 'ssh-bek.me',
 	/**
 	 * Used on index page and as a fallback if no title is set
 	 */
-	titleDefault: 'Astro Theme: Minimal Blog',
+	titleDefault: 'Blog and Portfolio Web Site',
 	/**
 	 * Used in meta tags, RSS feed, and other places
 	 */
-	description: 'Minimal Astro blog theme with extensive code syntax highlighting capabilities, focus on typography, and clean design bringing your content to the forefront.',
+	description: 'I am Siyovush-Bek, here you can find my projects, ideas and findings',
 	/**
 	 * Language used in the <html> tag
 	 */
@@ -31,7 +31,7 @@ export const SITE: Record<string, string> = {
 	/**
 	 * Default author name that gets added to meta tags
 	 */
-	defaultAuthor: 'LekoArts',
+	defaultAuthor: 'Siyovush-Bek T.',
 }
 
 interface Header {
