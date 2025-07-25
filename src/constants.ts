@@ -52,6 +52,10 @@ export const HEADER: Header = {
 			url: '/blog/',
 		},
 		{
+			title: 'Projects',
+			url: '/projects/',
+		},
+		{
 			title: 'About',
 			url: '/about/',
 		},

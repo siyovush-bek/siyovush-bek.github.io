@@ -10,23 +10,7 @@ import Prose from '@components/prose.astro'
 import Spacer from '@components/spacer.astro'
 import { SITE } from '@constants'
 
-const OSS_PROJECTS: Array<{ name: string; url: string; description: string }> = [
-	{
-		name: 'secco',
-		url: 'https://github.com/LekoArts/secco',
-		description: 'Local package testing made easy',
-	},
-	{
-		name: 'astro-loaders',
-		url: 'https://github.com/LekoArts/astro-loaders',
-		description: "Loaders for Astro's Content Layer",
-	},
-	{
-		name: 'annum',
-		url: 'https://github.com/LekoArts/annum',
-		description: 'Visualize your Trakt.tv history',
-	},
-]
+
 
 const POSTS_TO_SHOW = 3
 
@@ -61,25 +45,5 @@ const posts = sortAsc(await getCollection('blog')).slice(0, POSTS_TO_SHOW)
 				}
 			</div>
 		</section>
-		<!-- <Spacer axis="vertical" size={32} /> -->
-		<!-- <section>
-			<div class="border-b border-border pb-4">
-				<h2 class="font-medium text-xl md:text-2xl lg:text-3xl text-highlight">Open Source Projects</h2>
-			</div>
-			<Spacer axis="vertical" size={8} />
-			<div class="flex gap-10 flex-col">
-				{
-					OSS_PROJECTS.map((oss) => (
-						<div>
-							<Link variant="highlight" href={oss.url}>
-								{oss.name}
-							</Link>
-							<Spacer axis="vertical" size={2} />
-							<div class="text-faded">{oss.description}</div>
-						</div>
-					))
-				}
-			</div>
-		</section> -->
 	</SkipNavContent>
 </Layout>
